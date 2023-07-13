@@ -2,6 +2,7 @@ import "@/globals.css";
 
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://seungwonan.com"),
@@ -57,6 +58,7 @@ export default function RootLayout({
         <main className="relative flex-auto min-w-0 flex flex-col md:px-0 py-8">
           {children}
         </main>
+        <Analytics />
       </body>
     </html>
   );

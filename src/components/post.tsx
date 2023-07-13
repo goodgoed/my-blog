@@ -3,15 +3,8 @@ import { Post } from "contentlayer/generated";
 
 import { formatDate } from "@/lib/date";
 import type { Locale } from "@/i18n-config";
-import View from "./view";
 
-export default async function Post({
-  post,
-  allViews,
-}: {
-  post: Post;
-  allViews: { slug: string; count: number }[];
-}) {
+export default async function Post({ post }: { post: Post }) {
   const { locale: lang, slug, title, date, tags } = post;
 
   return (
@@ -37,9 +30,6 @@ export default async function Post({
                 </li>
               );
             })}
-          <span className="ml-auto text-xs text-gray-400 self-end">
-            <View slug={slug} allViews={allViews} lang={lang as Locale} />
-          </span>
         </ul>
       </Link>
     </li>

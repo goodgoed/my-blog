@@ -4,9 +4,9 @@ import Navbar from "@/app/[lang]/navbar";
 import { getLocales } from "@/lib/get-locale";
 import { Locale } from "@/i18n-config";
 
-// export async function generateStaticParams() {
-//   return [{ lang: "en" }, { lang: "ko" }];
-// }
+export async function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "ko" }];
+}
 
 export default async function Layout({
   children,
