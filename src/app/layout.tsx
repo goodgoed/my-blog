@@ -1,32 +1,33 @@
-import "@/globals.css";
+import '@/globals.css'
 
-import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from 'next'
+import { Raleway } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
+import clsx from 'clsx'
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://seungwonan.com"),
+  metadataBase: new URL('https://seungwonan.com'),
   alternates: {
-    canonical: "/",
+    canonical: '/',
     languages: {
-      "en-US": "/en",
-      "ko-KR": "ko",
-    },
+      'en-US': 'en',
+      'ko-KR': 'ko'
+    }
   },
   title: {
-    default: "Seungwon An (Harry)",
-    template: "%s | Seungwon An (Harry)",
+    default: 'Seungwon An (Harry)',
+    template: '%s | Seungwon An (Harry)'
   },
   description:
-    "A computer science student who pursues high standards in software",
+    'A computer science student who pursues high standards in software',
   openGraph: {
-    title: "Seungwon An",
+    title: 'Seungwon An (Harry)',
     description:
-      "A computer science student who pursues high standards in software",
-    url: "https://seungwonan.com",
-    siteName: "Seungwon An (Harry)",
-    locale: "en-US",
-    type: "website",
+      'A computer science student who pursues high standards in software',
+    url: 'https://seungwonan.com',
+    siteName: 'Seungwon An (Harry)',
+    locale: 'en-US',
+    type: 'website'
   },
   robots: {
     index: true,
@@ -34,32 +35,42 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-};
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  }
+}
 
 const raleway = Raleway({
-  subsets: ["latin"],
-});
+  subsets: ['latin']
+})
 
 export default function RootLayout({
-  children,
+  children
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html>
       <body
-        className={`antialiased w-4/5 mb-40 flex flex-col mx-auto mt-8 lg:w-1/2 ${raleway.className}`}
+        className={clsx(
+          'w-4/5 mb-40 flex flex-col mx-auto mt-4',
+          'md:mt-8',
+          'lg:w-1/2',
+          raleway.className
+        )}
       >
-        <main className="relative flex-auto min-w-0 flex flex-col md:px-0 py-8">
+        <main
+          className={clsx(
+            'antialiased relative flex-auto min-w-0 flex flex-col',
+            'md:px-0 md:py-8'
+          )}
+        >
           {children}
         </main>
         <Analytics />
       </body>
     </html>
-  );
+  )
 }
