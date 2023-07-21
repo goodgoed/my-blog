@@ -14,16 +14,12 @@ export const metadata: Metadata = {
       'ko-KR': 'ko'
     }
   },
-  title: {
-    default: 'Seungwon An (Harry)',
-    template: '%s | Seungwon An (Harry)'
-  },
   description:
-    'A computer science student who pursues high standards in software',
+    "I'm a sophomore computer science major student at SUNY Korea who pursues high standards in software. I am currently interested in Software Architecture.",
   openGraph: {
     title: 'Seungwon An (Harry)',
     description:
-      'A computer science student who pursues high standards in software',
+      "I'm a sophomore computer science major student at SUNY Korea who pursues high standards in software. I am currently interested in Software Architecture.",
     url: 'https://seungwonan.com',
     siteName: 'Seungwon An (Harry)',
     locale: 'en-US',
@@ -55,7 +51,7 @@ export default function RootLayout({
     <html>
       <body
         className={clsx(
-          'w-4/5 mb-40 flex flex-col mx-auto mt-4',
+          'w-11/12 mb-40 flex flex-col mx-auto mt-4',
           'md:mt-8',
           'lg:w-1/2',
           raleway.className
