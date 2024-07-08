@@ -1,4 +1,7 @@
 {
+  "general": {
+    "name": "Seungwon An (Harry)"
+  },
   "nav": {
     "home": "HOME",
     "blog": "BLOG",
@@ -6,12 +9,15 @@
   },
   "home": {
     "hi": "hi, i'm seungwon an (harry)",
-    "description": "I'm a sophomore computer science major student at SUNY Korea who pursues high standards in software. I am currently interested in Software Architecture."
+    "description": "I'm a senior computer science major student at SUNY Korea who pursues high standards in software. I am currently interested in Computer Architecture and Cloud Computing."
   },
   "blog": {
+    "title": "Blog",
+    "description": "This is where I share my thoughts and experiences",
     "back": "Back to blog"
   },
   "project": {
-    "temp": "This page will be updated soon!"
+    "title": "This page will be updated soon!",
+    "description": "This is where I fully enjoy what I love to do."
   }
 }

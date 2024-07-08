@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Raleway } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import clsx from 'clsx'
+import default_metadata from '@/locales/en/common.json'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://seungwonan.com'),
@@ -14,14 +15,12 @@ export const metadata: Metadata = {
       'ko-KR': 'ko'
     }
   },
-  description:
-    "I'm a sophomore computer science major student at SUNY Korea who pursues high standards in software. I am currently interested in Software Architecture.",
+  description: default_metadata['home']['description'],
   openGraph: {
-    title: 'Seungwon An (Harry)',
-    description:
-      "I'm a sophomore computer science major student at SUNY Korea who pursues high standards in software. I am currently interested in Software Architecture.",
+    title: default_metadata['general']['name'],
+    description:  default_metadata['home']['description'],
     url: 'https://seungwonan.com',
-    siteName: 'Seungwon An (Harry)',
+    siteName: default_metadata['general']['name'],
     locale: 'en-US',
     type: 'website'
   },
